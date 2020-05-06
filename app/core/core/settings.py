@@ -75,8 +75,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'ENGINE': 'djongo',
+    'NAME' : 'portafolio',
+    'HOST': 'mongodb+srv://laura:1000565891La@lauracluster-tg3vt.mongodb.net/portafolio?retryWrites=true&w=majority',
     }
 }
 
