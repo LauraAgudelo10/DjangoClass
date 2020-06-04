@@ -52,11 +52,14 @@
                  {{ formulario.correo }}
                  {{ formulario.tipomsj }}
                  {{ formulario.mensaje }}
-                 <span>
-                   {% if "ok" in request.GET %}
+                <span>
+                  {% if "ok" in request.GET %}
                     <span class="alert">Hemos recibido tu mensaje</span>
-                   {% endif %}
-                 </span>
+                  {% endif %}
+                  {% if "fail" in request.GET %}
+                    <span class="alert">No se puede enviar tu mensaje</span>
+                  {% endif %}
+                </span>
                 <button type="submit">{{ btn8 }}</button>
               </form>
             </div>
