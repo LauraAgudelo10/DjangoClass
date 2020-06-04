@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #van mis app:
+    'ckeditor',
+    'userdata',
+    'modulo',
+    'src.apps.SrcConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -104,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'UTC'
 
@@ -119,3 +125,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+#Variables para los archivos media
+MEDIA_URL = '/media/'
+
+#Ruta para llegar a los archivos media
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "src/static/assets/media/")
+
+#Editor de texto enriquecido
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+
+#Variables para el ingreso del correo electronico
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'e3a29ee61a8a5b'
+EMAIL_HOST_PASSWORD = 'bf18cd9f2fced4'
+EMAIL_PORT = '2525'

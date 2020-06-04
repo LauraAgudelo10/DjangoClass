@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+<!--Variables de entorno de html: -->
+{% block titulo %} SAV | SENA {% endblock %}
+
+
+{% block contenido %}
+    {% load static %}
+
+    <header>
+
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src=" {% static 'assets/media/img/iconmenu.png' %}" ></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">{{ btn1 }}</a></li>
+                <li><a href="#sobre-nosotros">{{ btn2 }}</a></li>
+                <li><a href="#caracteristicas">{{ btn3 }}</a></li>
+                <li><a href="#objetivos">{{ btn4 }}</a></li>
+                <li><a href="{% url 'nosotros' %}">{{ btn5 }}</a></li>
+                <li><a href="{% url 'contacto' %}">{{ btn6 }}</a></li>
+                <li><a href="{% url 'presentacion' %}">{{ btn7 }}</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="inicio-header">
+            <img src="{% static 'assets/media/img/inicio.jpg' %}" alt="" >
+            <div class="texto-encima">{{ tituloIni }}</div>
+        </section>
+        <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+            <h2 class="titulo">{{ tituloNosotros }}</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="{% static 'assets/media/img/sav.png' %}" alt="" class="imagen-sobre">
+                <div class="contenido-textos">
+                    <h3><span>{{ spanUno }}</span>{{ tituloSAV }}</h3>
+                    <p>{{ txt1 }}</p>
+                </div>
+            </div>
+        </section>
+        <section class="caracteristicas" id="caracteristicas">
+            <div class="contenedor">
+                <h2 class="titulo">{{ tituloCaracteristicas}}</h2>
+                <div class="caracteristicas-cont">
+                    <div class="caracteristicas-ind">
+                        <img src="{% static 'assets/media/img/eficaz.svg' %}" alt="">
+                        <h3>{{ tituloEficaz }}</h3>
+                        <p>{{ txt2 }}</p>
+                    </div>
+                    <div class="caracteristicas-ind">
+                        <img src="{% static 'assets/media/img/seguro.svg' %}" alt="">
+                        <h3>{{ tituloSeguro}}</h3>
+                        <p>{{ txt3 }}</p>
+                    </div>
+                    <div class="caracteristicas-ind">
+                        <img src="{% static 'assets/media/img/orden.svg' %}" alt="">
+                        <h3>{{ tituloOrganizado }}</h3>
+                        <p>{{ txt4 }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="objetivos contenedor" id="objetivos">
+            <h2 class="titulo">{{ tituloObjetivo }}</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'assets/media/img/funciones.svg' %}" alt="">
+                    <div class="contenido-texto-card">
+                        <p>{{ txt5 }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <h4>&copy;{{ txt6 }} </h4>
+        </div>
+        <h2 class="titulo-final">&copy; {{ txt7 }} </h2>
+    </footer>
+
+{% endblock %}
