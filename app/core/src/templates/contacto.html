@@ -48,10 +48,20 @@
             </form>-->
               <form action="" method="POST" class="formulario">
                 {% csrf_token %}
-                 {{ formulario.usuario }} 
+                <div class="formulario input">
+                 {{ formulario.usuario }}
+                </div> 
+                <div class="formulario input">
                  {{ formulario.correo }}
+                </div>
+                <br>
+                <div class="formulario input">
                  {{ formulario.tipomsj }}
+                </div>
+                <br>
+                <div class="formulario textarea">
                  {{ formulario.mensaje }}
+                </div>
                 <span>
                   {% if "ok" in request.GET %}
                     <span class="alert">Hemos recibido tu mensaje</span>

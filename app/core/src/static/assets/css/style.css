@@ -419,10 +419,9 @@ h5{
     padding: 12px 20px;
     border: 1px solid #999;
     color: #999;
-    font-weight: 400;
+    font-weight: 600;
     outline: 0;
 }
-
 .formulario textarea{
     max-width: 100%;
     min-width: 100%;
