@@ -21,12 +21,56 @@
         <img src="{% static 'assets/media/img/inicio.jpg' %}" alt="" >
         <div class="texto-encima">{{ txt1 }}</div>
     </section>
-    <section class="contenedor sobre-esquema" id="sobre-esquema">
-        <h2 class="titulo">{{ tituloUno }}</h2>
-        <div class="sobre-esquema">
-            <img src="{% static 'assets/media/img/esquemaBD.png' %}" alt="" class="imagen-esquema">
+    <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+        <h2 class="titulo">{{ tituloProblema1 }}</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="{% static 'assets/media/img/problema.png' %}" alt="" class="imagen-sobre">
+            <div class="contenido-textos">
+                <h3><span>{{ spanUno }}</span>{{ tituloProblema }}</h3>
+                <p>{{ texto1 }}</p>
+            </div>
         </div>
     </section>
+
+    <section style="background: #f2f2f2">
+        <section class="contenedor sobre-nosotros" id="sobre-nosotros" >
+            <h2 class="titulo"></h2>
+            <div class="contenedor-sobre-nosotros">
+                <div class="contenido-textos">
+                    <h3><span>{{ spanDos }}</span>{{ tituloSolucion }}</h3>
+                    <p>{{ texto2 }}</p>
+                </div>
+                <img src="{% static 'assets/media/img/solucion.png' %}" alt="" class="imagen-sobre">
+            </div>
+        </section>
+    </section>
+
+    <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+        <h2 class="titulo">{{ tituloFuncion }}</h2>
+        <div class="contenedor-sobre-nosotros">
+            <div class="contenido-textos">
+                <p>{{ texto3 }}</p>
+                <img src="{% static 'assets/media/img/funcion.png' %}" alt="" class="imagen-sobre">
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f2f2f2">
+        <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+            <h2 class="titulo">{{ tituloHerramientas }}</h2>
+            <div class="contenedor-sobre-nosotros">
+                <div class="contenido-textos">
+                    <img src="{% static 'assets/media/img/mysql.png' %}" alt="" style="max-width: 45%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="{% static 'assets/media/img/xampp.png' %}" alt=""style="max-width: 45%;"><br><br><br>
+                    <img src="{% static 'assets/media/img/php.png' %}" alt="" style="max-width: 45%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="{% static 'assets/media/img/html.png' %}" alt="" style="max-width: 45%;"><br><br><br>
+                    <img src="{% static 'assets/media/img/visual.png' %}" alt="" style="max-width: 30%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="{% static 'assets/media/img/sublime.png' %}" alt="" style="max-width: 60%;">
+                </div>
+            </div>
+        </section>
+    </section>
+    
 </main>
 <footer class="footer">
     <div class="contenedor-footer">

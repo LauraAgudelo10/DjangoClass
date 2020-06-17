@@ -123,6 +123,9 @@ main .sobre-nosotros{
 .imagen-sobre{
     width: 48%;
 }
+.imagen-so{
+    width: 20%;
+}
 
 .imagen-sobre:hover{
     width: 52%;
