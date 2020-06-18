@@ -19,54 +19,21 @@
 <main>
   <section class="inicio-header">
     <img src="{% static 'assets/media/img/inicio.jpg' %}" alt="" >
-    <div class="texto-encima">{{ texto }}</div>
+    <div class="texto-encima">{{ txt1 }}</div>
   </section>
   <section class="equipo" id="equipo">
-      <h2 class="titulo">{{ tituloNosotros}}</h2>
+      <h2 class="titulo">{{ txt2 }}</h2>
       <div class="nos">
         <div class="cards-wrapper">
-            <div class="card2">
-              <img src="{% static 'assets/media/img/pc1.jpeg' %}" alt="top1" class="image-top" />
-              <img src="{% static 'assets/media/img/denisse.jpg' %}" alt="image1" class="profile-image" />
-              <h1 class="fullname">{{ integranteUno }}</h1>
-              <h3 class="job">{{ txt1 }}</h3>
-              <h3 class="job">{{ txt2 }}</h3>
-              <p class="about-me">{{ txt3 }}</p>
-              <ul class="social-icons">
-                  <a href="https://www.facebook.com/profile.php?id=100002734831910"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-              </ul>
-              <h5>{{ txt4}}</h5>
-            </div>
-
-            <div class="card2">
-              <img src="{% static 'assets/media/img/pc.jpeg' %}" alt="top1" class="image-top" />
-              <img src="{% static 'assets/media/img/sergio.jpg' %}" alt="image1" class="profile-image" />
-              <h1 class="fullname">{{ integranteDos }}</h1>
-              <h3 class="job">{{ txt1 }}</h3>
-              <h3 class="job">{{ txt2 }}</h3>
-              <p class="about-me">{{ txt3 }}</p>
-              <ul class="social-icons">
-                <li>
-                  <a href="https://www.facebook.com/sergio.saldarriaga.100?red=bookmarks"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-              </ul>
-              <h5>{{ txt5 }}</h5>
-            </div>
-
+            
+          {% if object_list %}
+          {% for usuario in object_list %}
             <div class="card2">
               <img src="{% static 'assets/media/img/web.jpg' %}" alt="top1" class="image-top" />
-              <img src="{% static 'assets/media/img/laura.jpg' %}" alt="image1" class="profile-image" />
-              <h1 class="fullname">{{ integranteTres }}</h1>
-              <h3 class="job">{{ txt1 }}</h3>
-              <h3 class="job">{{ txt2 }}</h3>
-              <p class="about-me">{{ txt3 }}</p>
+              <img src="{% static 'assets/media/' %}{{ usuario.fotoUser }}" alt="image1" class="profile-image" />
+              <h1 class="fullname">{{ usuario.nombUser }}</h1>
+              <h3 class="job">{{ usuario.profeUser }}</h3><br>
+              <h3 class="job">{{ usuario.geneUser }}</h3>
               <ul class="social-icons">
                 <li>
                   <a href="https://www.facebook.com/profile.php?id=100010051182358"><i class="fab fa-facebook-f"></i></a>
@@ -75,8 +42,11 @@
                   <a href="#"><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
-              <h5>{{ txt6 }}</h5>
+              <h5>{{ usuario.teleUser }}</h5>
             </div>
+            {% endfor %}
+            {% endif %}
+
           </div>
         </div>
       </div>
@@ -84,9 +54,9 @@
 </main>
     <footer class="footer">
         <div class="contenedor-footer">
-            <h4>&copy; {{ txt7 }}</h4>
+            <h4>&copy; {{ txt3 }}</h4>
         </div>
-        <h2 class="titulo-final">&copy; {{ txt8 }}</h2>
+        <h2 class="titulo-final">&copy; {{ txt4 }}</h2>
     </footer>
 
 {% endblock %}

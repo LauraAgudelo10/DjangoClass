@@ -322,6 +322,7 @@ main .sobre-nosotros{
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-weight: 300;
+  text-align: center;
 }
 
 .about-me {
